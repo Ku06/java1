@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>割り勘アプリ</title>
+
+    <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 下の2行はHTMLとCSSを繋ぐ役割を果たしています ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 上の2行はHTMLとCSSを繋ぐ役割を果たしています ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+  </head>
+
+  <body>
+    <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ ここから下に、ブラウザに表示したい内容を記述する ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+
+    <div class="wrapper">
+      <div class="header">
+        <h1 class="heading-title">割り勘アプリ</h1>
+      </div>
+
+      <div class="input-form" id="input-form">
+        <!--テンプレートを作成-->
+        <!--name属性にはフォーム追加時にインデント番号を付与する-->
+        <div class="box2">
+        <input type="text" size="30" name="" placeholder="使った金額" id="money">
+        人数:<p id="counter">1</p>
+      </div>
+
+
+
+       <template id="form-template">
+         <div class="member" id="member">
+            <input type="text" size="20"class="name"id="name1" name="name[]" placeholder="名前">
+            <input type="text" size="10" name="nam" placeholder="傾斜(1～10)">
+            <label>
+                <input type="radio" name="male1" value="1" id="male">男性
+            </label>
+            <label>
+                <input type="radio" name="female1" value="0" id="female">女性
+            </label>
+        </div>
+       </template>
+      </div>
+
+     
+
+
+      <!--「追加」ボタンをクリックしたらJavascriptファイル内の関数addForm()を実行する-->
+      <div class="bt_addForm">
+        <input type="button" id="btnAdd"value="追加" onclick="addForm()">
+      </div>
+      <!--「削除」ボタンをクリックしたらJavascriptファイル内の関数deleteForm()を実行する-->
+      <div class="bt_deleteForm">
+        <input type="button"value="削除" onclick="deleteForm()">
+      </div>
+
+
+      <h1>割り勘タイプ</h1>
+      <form name="RadioForm">
+        <label><input type="radio" id="normal" name="choice" value="normal">普通に割り勘</label><br>
+        <label><input type="radio" id="slope" name="choice" value="slope">傾斜で割り勘</label><br>
+        <label><input type="radio" id="man" name="choice" value="man">男気割り勘</label><br>
+        <label><input type="radio" id="random" name="choice" value="random">ルーレット割り勘</label><br>
+        
+      </form>
+
+
+
+
+
+
+      <div id="result" class="result text-center"></div>
+      
+
+      
+
+      <div class="button-area text-center">
+        <button id="btn-start">割り勘スタート</button>
+      </div>
+    </div>
+
+    <!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑ ここから上に、ブラウザに表示したい内容を記述する ↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+
+    <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 下の2行はHTMLとJavaScriptファイルを繋ぐ役割を果たしています ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 上の2行はHTMLとJavaScriptファイルを繋ぐ役割を果たしています ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+  </body>
+</html>

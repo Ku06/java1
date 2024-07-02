@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>メタルワンクイズ</title>
+
+    <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 下の2行はHTMLとCSSを繋ぐ役割を果たしています ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+    <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 上の2行はHTMLとCSSを繋ぐ役割を果たしています ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+  </head>
+
+  <body>
+    <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ ここから下に、ブラウザに表示したい内容を記述する ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+
+    <div class="wrapper">
+      <div class="header">
+        <h1 class="heading-title">問題</h1>
+      </div>
+      <h2 id="question">問題表示</h2>
+      <script src="script.js"></script>
+
+
+      <ul>
+        <li id="ans1">選択肢1</li>
+        <li id="ans2">選択肢2</li>
+        <li id="ans3">選択肢3</li>
+      </ul>
+
+      <div class="btn1">
+
+        <button type="button" id="answer1"onclick="answerCheck(1)">A1</button>
+        <button type="button" id="answer2"onclick="answerCheck(2)">A2</button>
+        <button type="button" id="answer3"onclick="answerCheck(3)">A3</button>
+
+        
+      </div>
+
+      <div class="btn2" id="btn2">
+        <button type="button" id="btn3" class="hidden">
+              <a
+  href="https://social-plugins.line.me/lineit/share?url=yurukei-career.com"
+  target="_blank"
+  rel="nofollow noopener noreferrer"
+  >LINEで結果を送る</a>
+</button>
+
+
+<div class="btn4" id="btn4">
+  <button type="button" id="btn5" >
+        <a
+>もう1回</a>
+</button>
+     </div>
+
+
+    
+    <!-- ↑↑↑↑↑↑↑↑↑↑↑↑↑↑ ここから上に、ブラウザに表示したい内容を記述する ↑↑↑↑↑↑↑↑↑↑↑↑↑↑ -->
+
+    <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 下の2行はHTMLとJavaScriptファイルを繋ぐ役割を果たしています ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/script.js"></script>
+    <!-- ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ 上の2行はHTMLとJavaScriptファイルを繋ぐ役割を果たしています ↓↓↓↓↓↓↓↓↓↓↓↓↓↓ -->
+  </body>
+</html>
